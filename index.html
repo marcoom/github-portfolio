@@ -24,12 +24,12 @@
 
   <!-- Put your site title here -->
   <title>
-    Syed Ali Hussnain | A Web Developer based in Lahore, Pakistan.
+    Marco Mongi | AI & Computer Vision Engineer
   </title>
 
-  <meta name="description" content="Add small description of yourslef.">
+  <meta name="description" content="Telecommunications engineer applying Python, Computer Vision, LLMs and ML to deliver AI solutions." />
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <meta name="keywords" content="Marco Mongi, Python, Computer Vision, YOLO, LLMs, Machine Learning, Edge AI, Airflow, Grafana, MQTT, Satellite Imaging" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -41,8 +41,8 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
           </li>
@@ -56,10 +56,10 @@
       <div class="header__text">
         <h1 class="heading-primary">
           <!-- Replace the following name with your name -->
-          <span>Syed Ali Hussnain</span>
+          <span>Marco Mongi</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>A Web Developer based in Lahore, Pakistan.</p>
+        <p>Engineer building practical AI with Python — Computer Vision, LLMs, and ML — to solve real problems with measurable impact.</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
@@ -71,113 +71,186 @@
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+        <h2>Projects</h2>
         <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
 
+          <!-- License Plate Detector -->
           <div class="work__box">
             <div class="work__text">
-              <h3>Portfolio Template</h3>
+              <h3>License Plate Detector</h3>
               <p>
-                A free Open Source Portfolio for anyone to use for free.
+                Real‑time pipeline for license‑plate <strong>detection</strong>, <strong>multi‑object tracking</strong> and <strong>OCR</strong>, with an interactive UI and a fully reproducible, production‑oriented setup.
               </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
-              </ul>
-
+          
+              <div class="lpd-techs">
+                <ul class="work__list">
+                  <li>Object Detection (YOLOv8)
+                    <ul class="work__list work__list--nested">
+                      <li>Image labeling and augmentation</li>
+                      <li>Model training on custom dataset</li>
+                      <li>Edge processing (NCNN export)</li>
+                    </ul>
+                  </li>
+                  <li>Tracking (Deep SORT)</li>
+                  <li>OCR (EasyOCR)</li>
+                  <li>Gradio UI</li>
+                  <li>Python
+                    <ul class="work__list work__list--nested">
+                      <li>Testing and Coverage</li>
+                      <li>Clean Code and Project Structure</li>
+                    </ul>
+                  </li>
+                  <li>Docker</li>
+                  <li>GitHub Actions CI</li>
+                  <li>Sphinx Docs</li>
+                </ul>
+              </div>
+              
+          
               <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="https://huggingface.co/spaces/marcoom/license-plate-detector" target="_blank" class="link__text">
+                  Try online <span>&rarr;</span>
                 </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                <a href="https://github.com/marcoom/license-plate-detector" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub - license-plate-detector">
                 </a>
               </div>
             </div>
+          
             <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
+              <img src="./images/projects/license-plate-detector.gif"
+                   class="work__image"
+                   alt="License Plate Detector — detection, tracking and OCR demo" />
             </div>
           </div>
+          
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Calculator</h3>
+              <h3>Household Energy Forecasting</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
+                Forecasts household electricity consumption using a complete data‑science pipeline—from exploration and preprocessing to model training, comparison, and rigorous evaluation—aimed at improving planning and operational efficiency.
               </p>
+              <!-- Evidence: objective and context; models compared; metrics & conclusion (Prophet best balance) -->
+              <!-- :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11} :contentReference[oaicite:12]{index=12} :contentReference[oaicite:13]{index=13} -->
+          
               <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
+                <li>EDA & ETL</li>
+                <li>Feature engineering</li>
+                <li>Time‑series models: FFNN, Prophet, RF</li>
+                <li>Metrics: MSE / MAE / MAPE</li>
+                <li>PR & F1 curves</li>
+                <li>Fourier seasonality</li>
+                <li>Gradio notebooks</li>
+                <li>LaTeX reporting</li>
+                <li>Jupyter / Colab</li>
               </ul>
-
+              
+              <!-- Evidence: preprocessing steps; model list; training/test periods; Gradio UI -->
+              <!-- :contentReference[oaicite:14]{index=14} :contentReference[oaicite:15]{index=15} :contentReference[oaicite:16]{index=16} :contentReference[oaicite:17]{index=17} :contentReference[oaicite:18]{index=18} -->
+          
               <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                <a href="https://github.com/marcoom/household-energy-forecasting"
+                   title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub - household-energy-forecasting">
                 </a>
               </div>
             </div>
+          
             <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+              <img src="./images/projects/household-energy-forecasting.png"
+                   class="work__image"
+                   alt="Household Energy Forecasting — time‑series models and results" />
             </div>
           </div>
+          
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Notificator</h3>
+              <h3>Interactive Adventure Generator</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
+                Agentic storytelling app where an LLM narrates a branching adventure and adapts the plot to the player’s choices.
+                Supports bilingual voice & text interaction, streaming responses, and configurable model providers.
               </p>
+          
               <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
+                <li>LLM API interaction</li>
+                <li>Prompting</li>
+                <li>Agentic flow (LangChain)</li>
+                <li>TTS (Piper)</li>
+                <li>STT (Whisper)</li>
+                <li>Gradio UI</li>
               </ul>
-
+              
+          
               <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                <a href="https://github.com/marcoom/interactive-adventure-generator" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub - interactive-adventure-generator">
                 </a>
               </div>
             </div>
+          
             <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
+              <img src="./images/projects/interactive-adventure-generator.png"
+                   class="work__image"
+                   alt="Interactive Adventure Generator — LLM, voice I/O and streaming" />
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+          
 
-    <!-- ***** Clients ***** -->
+    <!-- ***** Certifications ***** -->
 
-    <section class="client" id="clients">
+    <section class="client" id="certifications">
       <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
-        </div>
+        <h2>Certifications</h2>
+
+        <ul class="certs">
+          <!-- Stanford ML Specialization -->
+          <li class="cert">
+            <img src="./images/certifications/stanford.svg" alt="Stanford University" class="cert__logo" />
+            <div class="cert__body">
+              <h3>Machine Learning Specialization</h3>
+              <p>Stanford University — 2025</p>
+            </div>
+          </li>
+
+          <!-- University Diploma in Data Science -->
+          <li class="cert">
+            <img src="./images/certifications/unc.svg" alt="National University of Córdoba (UNC) and MundosE" class="cert__logo" />
+            <div class="cert__body">
+              <h3>University Diploma in Data Science</h3>
+              <p>MundosE & National University of Córdoba (UNC) — 2024</p>
+            </div>
+          </li>
+
+          <!-- Cambridge English -->
+          <li class="cert">
+            <img src="./images/certifications/cambridge.svg" alt="University of Cambridge" class="cert__logo" />
+            <div class="cert__body">
+              <h3>First Certificate in English (FCE)</h3>
+              <p>University of Cambridge — 2017</p>
+              <p class="cert__detail">Official level: <strong>B2</strong> &nbsp;•&nbsp; Current proficiency: <strong>C1</strong>.</p>
+              <!-- Si preferís tu texto original (aunque no es técnicamente exacto), usa:
+              <p class="cert__detail">Level C1.</p>
+              -->
+            </div>
+          </li>
+
+          <!-- Telecommunications Engineer -->
+          <li class="cert">
+            <img src="./images/certifications/unrc.svg" alt="Universidad Nacional de Río Cuarto" class="cert__logo" />
+            <div class="cert__body">
+              <h3>Telecommunications Engineer</h3>
+              <p>Universidad Nacional de Río Cuarto — 2013–2022</p>
+              <p class="cert__detail">Specialization: radio communications &nbsp;•&nbsp; GPA: <strong>8.71</strong>.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
+
 
     <!-- ***** About ***** -->
 
@@ -188,18 +261,16 @@
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
+              I apply Python, Computer Vision, and Machine Learning to solve real‑world problems and deliver reliable AI systems. 
+              My work ranges from extracting actionable insights from satellite imagery to deploying edge‑based quality‑control models in manufacturing.
+              Continuous learning is central to how I work, and I share my projects openly so others can build faster.
             </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
+            <a href="https://github.com/marcoom/curriculum_vitae/blob/main/CV_Marco_Mongi_english_2024.pdf" target="_blank" class="btn">Download CV</a>
           </div>
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+            <img class="about__photo" src="./images/profile-picture.jpeg" alt="" />
           </div>
         </div>
       </div>
@@ -213,15 +284,11 @@
       <h2>Get in Touch</h2>
       <div class="contact__info">
         <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
+          If you are exploring practical AI for vision or data‑driven products—and value production‑ready, maintainable solutions—I'd be happy to connect.
+          The quickest way to reach me is by email.
         </p>
         <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        <a href="mailto:marcomongi@gmail.com" class="btn">marcomongi@gmail.com</a>
       </div>
     </div>
   </section>
@@ -233,37 +300,38 @@
       <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          <a href="https://github.com/marcoom" title="GitHub">
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a href="https://www.linkedin.com/in/marco-mongi/" title="LinkedIn">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
+          <a href="https://medium.com/@marcomongi" title="Medium">
+            <img src="./images/medium.svg" class="footer__social-image" alt="Medium">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://kaggle.com/marcoom" title="Kaggle">
+            <img src="./images/kaggle.svg" class="footer__social-image" alt="Kaggle">
           </a>
         </li>
       </ul>
+      
 
       <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
         &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
       </p>
-      <div class="footer__github-buttons">
+      <!-- <div class="footer__github-buttons">
         <iframe
           src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
           frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
         </iframe>
-      </div>
+      </div> -->
     </div>
   </footer>
 

@@ -612,6 +612,7 @@ body:not(.user-is-tabbing) a:focus {
     } 
 }
 
+/* === Sublists for projects descriptions === */
 .lpd-techs .work__list {
     list-style: disc;
     padding-left: 1.25rem;

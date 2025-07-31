@@ -84,7 +84,7 @@
                 Real‑time pipeline for license‑plate <strong>detection</strong>, <strong>multi‑object tracking</strong> and <strong>OCR</strong>, with an interactive UI and a fully reproducible, production‑oriented setup.
               </p>
           
-              <div class="lpd-techs">
+              <div class="sublists">
                 <ul class="work__list">
                   <li>Object Detection (YOLOv8)
                     <ul class="work__list work__list--nested">
@@ -126,7 +126,7 @@
             </div>
           </div>
           
-
+          <!-- Household Energy Forecasting -->
           <div class="work__box">
             <div class="work__text">
               <h3>Household Energy Forecasting</h3>
@@ -136,9 +136,7 @@
               <p>
                 A report in scientific format and presentation are available (Spanish)
               </p>
-              <!-- Evidence: objective and context; models compared; metrics & conclusion (Prophet best balance) -->
-              <!-- :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11} :contentReference[oaicite:12]{index=12} :contentReference[oaicite:13]{index=13} -->
-          
+
               <ul class="work__list">
                 <li>EDA & ETL</li>
                 <li>Feature engineering</li>
@@ -151,9 +149,6 @@
                 <li>Jupyter / Colab</li>
               </ul>
               
-              <!-- Evidence: preprocessing steps; model list; training/test periods; Gradio UI -->
-              <!-- :contentReference[oaicite:14]{index=14} :contentReference[oaicite:15]{index=15} :contentReference[oaicite:16]{index=16} :contentReference[oaicite:17]{index=17} :contentReference[oaicite:18]{index=18} -->
-          
               <div class="work__links">
                 <a href="https://github.com/marcoom/household-energy-forecasting"
                    title="View Source Code" target="_blank">
@@ -170,6 +165,7 @@
           </div>
           
 
+          <!-- Interactive Adventure Generator -->
           <div class="work__box">
             <div class="work__text">
               <h3>Interactive Adventure Generator</h3>
@@ -201,7 +197,292 @@
                    alt="Interactive Adventure Generator — LLM, voice I/O and streaming" />
             </div>
           </div>
-          
+
+          <!-- Blood Cells Count Aid -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Blood Cells Count Aid</h3>
+              <p>
+                Automated microscopy assistant that detects and counts red blood cells, white blood cells, and platelets in stained blood-smear images, overlaying colour-coded markers in a PyQt5 desktop UI—achieving ≈ 98 % overall counting accuracy versus expert annotations on eight test images.
+              </p>
+
+              <div class="sublists">
+                <ul class="work__list">
+                  <li>Classical Computer Vision
+                    <ul class="work__list work__list--nested">
+                      <li>Colour-plane decomposition</li>
+                      <li>Histogram equalisation</li>
+                      <li>Edge detection (Canny)</li>
+                      <li>Morphological operations</li>
+                      <li>Adaptive thresholding</li>
+                      <li>Distance-transform segmentation</li>
+                    </ul>
+                  </li>
+                  <li>PyQt5 UI</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="work__image-box">
+              <img src="./images/projects/blood-cells-count-aid.gif"
+                   class="work__image"
+                   alt="Blood Cells Count Aid — automated cell counting demo" />
+            </div>
+          </div>
+
+          <!-- Market-Sentiment Predictor -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Market-Sentiment Predictor</h3>
+              <p>
+                Pipeline that scrapes finance-related tweets, extracts daily keyword sentiment with RoBERTa (≈ 90 % accuracy), fuses it with index prices to build time-series features, and trains classification/regression models for next-day moves—revealing only 50 % up-vs-down accuracy and underscoring the random-walk nature of the target.
+              </p>
+
+              <div class="sublists">
+                <ul class="work__list">
+                  <li>NLP &amp; Sentiment Analysis
+                    <ul class="work__list work__list--nested">
+                      <li>Web scraping</li>
+                      <li>Pre-processing</li>
+                      <li>Transformer sentiment analysis (RoBERTa)</li>
+                    </ul>
+                  </li>
+                  <li>Time-Series Feature Engineering
+                    <ul class="work__list work__list--nested">
+                      <li>Daily aggregation</li>
+                      <li>Log-return targets</li>
+                    </ul>
+                  </li>
+                  <li>Supervised Learning
+                    <ul class="work__list work__list--nested">
+                      <li>Binary classification</li>
+                      <li>Regression</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="work__image-box">
+              <img src="./images/projects/market-sentiment-predictor.png"
+                    class="work__image"
+                    alt="Market-Sentiment Predictor — sentiment fusion and modelling demo" />
+            </div>
+          </div>
+
+          <!-- OEE Analytics (Work Project) -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>OEE Analytics</h3>
+              <span class="work-project-badge">Work Project</span>
+              <p>
+                End-to-end vision solution for a commercial bakery: smart cameras with YOLO object detection and DeepSORT tracking on Raspberry Pi 5 + Hailo edge HW stream MQTT counts to a Grafana OEE dashboard—boosting data-driven productivity across the line.
+              </p>
+
+              <div class="sublists">
+                <ul class="work__list">
+                  <li>Computer vision
+                    <ul class="work__list work__list--nested">
+                      <li>Object detection&nbsp;(YOLO)</li>
+                      <li>Multi-object tracking&nbsp;(DeepSORT)</li>
+                      <li>Custom dataset collection&nbsp;&amp;&nbsp;labeling</li>
+                    </ul>
+                  </li>
+                  <li>Edge&nbsp;AI hardware
+                    <ul class="work__list work__list--nested">
+                      <li>Raspberry&nbsp;Pi&nbsp;5</li>
+                      <li>Hailo acceleration</li>
+                    </ul>
+                  </li>
+                  <li>MQTT messaging</li>
+                  <li>Grafana dashboards</li>
+                  <li>3D printing</li>
+                  <li>Systems engineering&nbsp;&amp; leadership
+                    <ul class="work__list work__list--nested">
+                      <li>Requirements engineering</li>
+                      <li>Architecture design</li>
+                      <li>Team mentoring &amp; project ownership</li>
+                      <li>Client installation &amp; training</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="work__image-box">
+              <video width="100%" height="auto" controls controlsList="nodownload">
+                <source src="./images/projects/oee-analytics.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <!-- SABIAMar L0 Processor Enhancements (Work Project) -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>SABIAMar L0 Processor</h3>
+              <span class="work-project-badge">Work Project</span>
+              <p>
+                Upgraded the Level-0 processor for the SABIAMar Earth-observation satellite, rewriting the Python pipeline that decodes raw downlinked frames—from transport and network layers through image, line and pixel levels—and appends telemetry metadata, yielding structured datasets for all downstream calibration and scientific analysis.
+              </p>
+
+              <ul class="work__list">
+                <li>Python</li>
+                <li>Automated testing</li>
+                <li>Binary-frame decoding</li>
+                <li>Data-pipeline design</li>
+              </ul>
+            </div>
+
+            <div class="work__image-box">
+              <img src="./images/projects/sabiamar-logo.png"
+                   class="work__image"
+                   alt="SABIAMar L0 Processor — decoding pipeline overview" />
+            </div>
+          </div>
+
+          <!-- Satellite Crop Detector -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Satellite Crop Detector</h3>
+              <span class="work-project-badge">Work Project</span>
+              <p>
+                Python platform that classifies crop types from multi-temporal satellite imagery: per-pixel reflectance series are processed with classical computer-vision techniques, engineered into features, and fed to a Random&nbsp;Forest model—reaching a 93&nbsp;% F1 score on ground-truth field data.
+              </p>
+
+              <div class="sublists">
+                <ul class="work__list">
+                  <li>Classical computer vision
+                    <ul class="work__list work__list--nested">
+                      <li>Binary &amp; morphological operations</li>
+                      <li>Median filtering</li>
+                      <li>Upscaling / downscaling</li>
+                    </ul>
+                  </li>
+                  <li>Geospatial imagery &amp; GIS
+                    <ul class="work__list work__list--nested">
+                      <li>Raster processing</li>
+                      <li>ROI masking &amp; clipping</li>
+                      <li>Geolocated time-series stacks</li>
+                      <li>Time-series feature engineering</li>
+                    </ul>
+                  </li>
+                  <li>Machine learning
+                    <ul class="work__list work__list--nested">
+                      <li>Supervised classification (Random&nbsp;Forest)</li>
+                    </ul>
+                  </li>
+                  <li>Python</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="work__image-box">
+              <img src="./images/projects/satellite-crop-detector.png"
+                   class="work__image"
+                   alt="Satellite Crop Detector — classification workflow demo" />
+            </div>
+           
+          </div>
+
+          <!-- Poultry Environment Regulator -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Poultry Environment Regulator</h3>
+              <p>
+                Microcontroller-based controller that automates heating, ventilation cycles and lighting schedules in chick brooders, using an Arduino with DHT11 sensing, RTC time-keeping and relay-switched loads—settings are adjusted via an LCD-encoder menu, with safe defaults after power loss.
+              </p>
+
+              <div class="sublists">
+                <ul class="work__list">
+                  <li>Circuit design &amp; implementation</li>
+                  <li>Arduino programming</li>
+                  <li>Electronic components
+                    <ul class="work__list work__list--nested">
+                      <li>Arduino&nbsp;UNO</li>
+                      <li>DHT11 temperature-humidity sensor</li>
+                      <li>Real-time clock (RTC)</li>
+                      <li>Relay modules</li>
+                      <li>LCD display</li>
+                      <li>Rotary encoder + push-button</li>
+                      <li>Status LEDs</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="work__image-box">
+              <div class="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-1.png" class="work__image" alt="Poultry Environment Regulator 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-2.jpg" class="work__image" alt="Poultry Environment Regulator 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-3.jpg" class="work__image" alt="Poultry Environment Regulator 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-4.jpg" class="work__image" alt="Poultry Environment Regulator 4">
+                  </div>
+                </div>
+                <button class="carousel-control prev" aria-label="Previous image">❮</button>
+                <button class="carousel-control next" aria-label="Next image">❯</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tablet-Joystick Dock -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Tablet-Joystick Dock</h3>
+              <p>
+                Custom 3D-printed add-on that clamps a joystick to a tablet while rerouting power, audio and volume controls through internal USB-C / 3.5 mm extensions and a dual-button circuit—restoring full charging, headphone and volume functionality during gameplay.
+              </p>
+
+              <ul class="work__list">
+                <li>3D design</li>
+                <li>3D printing</li>
+                <li>Electronics prototyping</li>
+              </ul>
+            </div>
+
+            <div class="work__image-box">
+              <div class="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-1.png" class="work__image" alt="Tablet-Joystick Dock 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-2.jpg" class="work__image" alt="Tablet-Joystick Dock 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-3.jpg" class="work__image" alt="Tablet-Joystick Dock 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-4.jpg" class="work__image" alt="Tablet-Joystick Dock 4">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-5.jpg" class="work__image" alt="Tablet-Joystick Dock 5">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-6.jpg" class="work__image" alt="Tablet-Joystick Dock 6">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-7.JPG" class="work__image" alt="Tablet-Joystick Dock 7">
+                  </div>
+                </div>
+                <button class="carousel-control prev" aria-label="Previous image">❮</button>
+                <button class="carousel-control next" aria-label="Next image">❯</button>
+              </div>
+            </div>
+          </div>          
+
 
     <!-- ***** Certifications ***** -->
 
@@ -235,9 +516,6 @@
               <h3>First Certificate in English (FCE)</h3>
               <p>University of Cambridge — 2017</p>
               <p class="cert__detail">Official level: <strong>B2</strong> &nbsp;•&nbsp; Current proficiency: <strong>C1</strong>.</p>
-              <!-- Si preferís tu texto original (aunque no es técnicamente exacto), usa:
-              <p class="cert__detail">Level C1.</p>
-              -->
             </div>
           </li>
 
@@ -342,6 +620,70 @@
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
   <script src="./index.js"></script>
+  <script>
+    // Simple Carousel Implementation
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousels = document.querySelectorAll('.carousel');
+      
+      carousels.forEach(carousel => {
+        const items = carousel.querySelectorAll('.carousel-item');
+        const prevBtn = carousel.querySelector('.prev');
+        const nextBtn = carousel.querySelector('.next');
+        const interval = 5000; // 5 seconds
+        let currentIndex = 0;
+        let slideInterval;
+
+        // Show initial slide
+        items[0].classList.add('active');
+        
+        // Function to show slide by index
+        function showSlide(index) {
+          // Remove active class from all items
+          items.forEach(item => item.classList.remove('active'));
+          
+          // Handle wrapping
+          currentIndex = (index + items.length) % items.length;
+          
+          // Show current slide
+          items[currentIndex].classList.add('active');
+        }
+        
+        // Next slide function
+        function nextSlide() {
+          showSlide(currentIndex + 1);
+        }
+        
+        // Previous slide function
+        function prevSlide() {
+          showSlide(currentIndex - 1);
+        }
+        
+        // Start auto-rotation
+        function startCarousel() {
+          stopCarousel();
+          slideInterval = setInterval(nextSlide, interval);
+        }
+        
+        // Stop auto-rotation
+        function stopCarousel() {
+          if (slideInterval) {
+            clearInterval(slideInterval);
+          }
+        }
+        
+        // Navigation buttons
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        
+        // Pause on hover
+        carousel.addEventListener('mouseenter', stopCarousel);
+        carousel.addEventListener('mouseleave', startCarousel);
+        
+        // Start the carousel
+        startCarousel();
+      });
+    });
+  </script>
 </body>
 
 </html>

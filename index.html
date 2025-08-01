@@ -134,15 +134,13 @@
                 Forecasts household electricity consumption using a complete data‑science pipeline—from exploration and preprocessing to model training, comparison, and rigorous evaluation—aimed at improving planning and operational efficiency.
               </p>
               <p>
-                A report in scientific format and presentation are available (Spanish)
+                A report in scientific format and presentation are available (Spanish).
               </p>
 
               <ul class="work__list">
                 <li>EDA & ETL</li>
                 <li>Feature engineering</li>
                 <li>Time‑series models: FFNN, Prophet, RF</li>
-                <li>Metrics: MSE / MAE / MAPE</li>
-                <li>PR & F1 curves</li>
                 <li>Fourier seasonality</li>
                 <li>Gradio notebooks</li>
                 <li>LaTeX reporting</li>
@@ -203,7 +201,7 @@
             <div class="work__text">
               <h3>Blood Cells Count Aid</h3>
               <p>
-                Automated microscopy assistant that detects and counts red blood cells, white blood cells, and platelets in stained blood-smear images, overlaying colour-coded markers in a PyQt5 desktop UI—achieving ≈ 98 % overall counting accuracy versus expert annotations on eight test images.
+                Automated microscopy assistant that detects and counts red blood cells, white blood cells, and platelets in stained blood-smear images, overlaying colour-coded markers in a PyQt5 desktop UI—achieving ≈ 98 % overall counting accuracy versus expert annotations on selected test images.
               </p>
 
               <div class="sublists">
@@ -278,14 +276,14 @@
               <h3>OEE Analytics</h3>
               <span class="work-project-badge">Work Project</span>
               <p>
-                End-to-end vision solution for a commercial bakery: smart cameras with YOLO object detection and DeepSORT tracking on Raspberry Pi 5 + Hailo edge HW stream MQTT counts to a Grafana OEE dashboard—boosting data-driven productivity across the line.
+                End-to-end vision solution for a commercial bakery: smart cameras with object detection algorithms and DeepSORT tracking on Raspberry Pi 5 + Hailo edge HW stream MQTT counts to a Grafana OEE dashboard—boosting data-driven productivity across the line.
               </p>
 
               <div class="sublists">
                 <ul class="work__list">
                   <li>Computer vision
                     <ul class="work__list work__list--nested">
-                      <li>Object detection&nbsp;(YOLO)</li>
+                      <li>Object detection</li>
                       <li>Multi-object tracking&nbsp;(DeepSORT)</li>
                       <li>Custom dataset collection&nbsp;&amp;&nbsp;labeling</li>
                     </ul>
@@ -325,7 +323,7 @@
               <h3>SABIAMar L0 Processor</h3>
               <span class="work-project-badge">Work Project</span>
               <p>
-                Upgraded the Level-0 processor for the SABIAMar Earth-observation satellite, rewriting the Python pipeline that decodes raw downlinked frames—from transport and network layers through image, line and pixel levels—and appends telemetry metadata, yielding structured datasets for all downstream calibration and scientific analysis.
+                Upgraded the Level-0 processor—the software responsible for decoding the raw binary image data transmitted by the SABIAMar Earth-observation satellite. Specifically, I implemented the unpacking of data frames across multiple levels—from transport and network protocols, through image and line layers, down to individual pixels—and added telemetry metadata to the resulting files. The Level 0 processor is the first and essential stage in a chain of processors that ultimately produces usable satellite images. 
               </p>
 
               <ul class="work__list">
@@ -349,32 +347,27 @@
               <h3>Satellite Crop Detector</h3>
               <span class="work-project-badge">Work Project</span>
               <p>
-                Python platform that classifies crop types from multi-temporal satellite imagery: per-pixel reflectance series are processed with classical computer-vision techniques, engineered into features, and fed to a Random&nbsp;Forest model—reaching a 93&nbsp;% F1 score on ground-truth field data.
+                Python platform that classifies crop types from time-series of multi-spectral satellite imagery: per-pixel reflectance series are processed with classical computer-vision techniques, engineered into features, and fed to a Random&nbsp;Forest model—reaching a 93&nbsp;% F1 score.
               </p>
 
               <div class="sublists">
                 <ul class="work__list">
+                  <li>Python</li>
                   <li>Classical computer vision
                     <ul class="work__list work__list--nested">
-                      <li>Binary &amp; morphological operations</li>
+                      <li>Morphological operations</li>
                       <li>Median filtering</li>
                       <li>Upscaling / downscaling</li>
+                      <li>Binary masking</li>
                     </ul>
                   </li>
-                  <li>Geospatial imagery &amp; GIS
-                    <ul class="work__list work__list--nested">
-                      <li>Raster processing</li>
-                      <li>ROI masking &amp; clipping</li>
-                      <li>Geolocated time-series stacks</li>
-                      <li>Time-series feature engineering</li>
-                    </ul>
-                  </li>
+                  <li>Geospatial imagery &amp; GIS</li>
                   <li>Machine learning
                     <ul class="work__list work__list--nested">
-                      <li>Supervised classification (Random&nbsp;Forest)</li>
+                      <li>Time-series feature engineering</li>
+                      <li>Supervised classification</li>
                     </ul>
                   </li>
-                  <li>Python</li>
                 </ul>
               </div>
             </div>
@@ -392,7 +385,7 @@
             <div class="work__text">
               <h3>Poultry Environment Regulator</h3>
               <p>
-                Microcontroller-based controller that automates heating, ventilation cycles and lighting schedules in chick brooders, using an Arduino with DHT11 sensing, RTC time-keeping and relay-switched loads—settings are adjusted via an LCD-encoder menu, with safe defaults after power loss.
+                Automated control system for chick brooders, using a microcontroller to manage heating, ventilation, and lighting schedules. The system is based on an Arduino UNO with DHT11 sensing, RTC time-keeping, and relay-controlled loads. Settings are adjusted via an LCD-encoder menu, with safe defaults restored after power loss.
               </p>
 
               <div class="sublists">
@@ -401,7 +394,7 @@
                   <li>Arduino programming</li>
                   <li>Electronic components
                     <ul class="work__list work__list--nested">
-                      <li>Arduino&nbsp;UNO</li>
+                      <li>Arduino</li>
                       <li>DHT11 temperature-humidity sensor</li>
                       <li>Real-time clock (RTC)</li>
                       <li>Relay modules</li>
@@ -442,7 +435,7 @@
             <div class="work__text">
               <h3>Tablet-Joystick Dock</h3>
               <p>
-                Custom 3D-printed add-on that clamps a joystick to a tablet while rerouting power, audio and volume controls through internal USB-C / 3.5 mm extensions and a dual-button circuit—restoring full charging, headphone and volume functionality during gameplay.
+                Custom 3D-printed add-on that clamps a joystick to a tablet while rerouting power, audio and volume controls through internal USB / 3.5 mm extensions and a dual-button circuit—restoring full charging, headphone and volume functionality during gameplay.
               </p>
 
               <ul class="work__list">
@@ -543,7 +536,7 @@
             <!-- Replace the below paragraph with info about yourself -->
             <p>
               I apply Python, Computer Vision, and Machine Learning to solve real‑world problems and deliver reliable AI systems. 
-              My work ranges from extracting actionable insights from satellite imagery to deploying edge‑based quality‑control models in manufacturing.
+              My work ranges from extracting actionable insights from satellite imagery to deploying edge based computer vision systems in manufacturing. 
               Continuous learning is central to how I work, and I share my projects openly so others can build faster.
             </p>
             <a href="https://drive.google.com/file/d/1Cl9RdQfLXsEZZh4WxNcPIyK3kTj0ZIk0/view?usp=sharing" target="_blank" class="btn">Download CV</a>

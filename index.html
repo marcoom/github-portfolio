@@ -72,7 +72,8 @@
     <section class="work" id="work">
       <div class="row">
         <h2>Projects</h2>
-        <div class="work__boxes">
+        <h3 class="work__group-heading">Principal Projects</h3>
+        <div class="work__boxes work__boxes--principal">
 
           <!-- Each div with the work__box class is a project. -->
 
@@ -455,219 +456,243 @@
             </div>
           </div>
 
-          <!-- OEE Analytics (Work Project) -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>OEE Analytics</h3>
-              <span class="work-project-badge">Work Project</span>
-              <p>
-                End-to-end vision solution for a commercial bakery: smart cameras with object detection algorithms and DeepSORT tracking on Raspberry Pi 5 + Hailo edge HW stream MQTT counts to a Grafana OEE dashboard—boosting data-driven productivity across the line.
-              </p>
+        </div>
 
-              <div class="sublists">
-                <ul class="work__list">
-                  <li>Computer vision
-                    <ul class="work__list work__list--nested">
-                      <li>Object detection</li>
-                      <li>Multi-object tracking&nbsp;(DeepSORT)</li>
-                      <li>Custom dataset collection&nbsp;&amp;&nbsp;labeling</li>
+        <div class="work__accordion" data-collapsible>
+          <button type="button" class="work__accordion-toggle" aria-expanded="false" aria-controls="work-projects-panel" data-collapsible-toggle>
+            <span class="work__accordion-title">Work Projects</span>
+            <span class="work__accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="work__accordion-panel" id="work-projects-panel" data-collapsible-panel hidden>
+            <div class="work__boxes work__boxes--nested">
+
+              <!-- OEE Analytics (Work Project) -->
+              <div class="work__box">
+                <div class="work__text">
+                  <h3>OEE Analytics</h3>
+                  <span class="work-project-badge">Work Project</span>
+                  <p>
+                    End-to-end vision solution for a commercial bakery: smart cameras with object detection algorithms and DeepSORT tracking on Raspberry Pi 5 + Hailo edge HW stream MQTT counts to a Grafana OEE dashboard—boosting data-driven productivity across the line.
+                  </p>
+
+                  <div class="sublists">
+                    <ul class="work__list">
+                      <li>Computer vision
+                        <ul class="work__list work__list--nested">
+                          <li>Object detection</li>
+                          <li>Multi-object tracking&nbsp;(DeepSORT)</li>
+                          <li>Custom dataset collection&nbsp;&amp;&nbsp;labeling</li>
+                        </ul>
+                      </li>
+                      <li>Edge&nbsp;AI hardware
+                        <ul class="work__list work__list--nested">
+                          <li>Raspberry&nbsp;Pi&nbsp;5</li>
+                          <li>Hailo acceleration</li>
+                        </ul>
+                      </li>
+                      <li>MQTT messaging</li>
+                      <li>Grafana dashboards</li>
+                      <li>3D printing</li>
+                      <li>Systems engineering&nbsp;&amp; leadership
+                        <ul class="work__list work__list--nested">
+                          <li>Requirements engineering</li>
+                          <li>Architecture design</li>
+                          <li>Team mentoring &amp; project ownership</li>
+                          <li>Client installation &amp; training</li>
+                        </ul>
+                      </li>
                     </ul>
-                  </li>
-                  <li>Edge&nbsp;AI hardware
-                    <ul class="work__list work__list--nested">
-                      <li>Raspberry&nbsp;Pi&nbsp;5</li>
-                      <li>Hailo acceleration</li>
-                    </ul>
-                  </li>
-                  <li>MQTT messaging</li>
-                  <li>Grafana dashboards</li>
-                  <li>3D printing</li>
-                  <li>Systems engineering&nbsp;&amp; leadership
-                    <ul class="work__list work__list--nested">
-                      <li>Requirements engineering</li>
-                      <li>Architecture design</li>
-                      <li>Team mentoring &amp; project ownership</li>
-                      <li>Client installation &amp; training</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="work__image-box">
-              <video class="work__image"
-                     data-project-media
-                     preload="metadata"
-                     poster="./images/projects/oee-analytics-poster.webp"
-                     muted
-                     playsinline
-                     controls
-                     controlsList="nodownload"
-                     aria-label="OEE Analytics — edge vision pipeline demo">
-                <source src="./images/projects/oee-analytics.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
-          <!-- SABIAMar L0 Processor Enhancements (Work Project) -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>SABIAMar L0 Processor</h3>
-              <span class="work-project-badge">Work Project</span>
-              <p>
-                Upgraded the Level-0 processor—the software responsible for decoding the raw binary image data transmitted by the SABIAMar Earth-observation satellite. Specifically, I implemented the unpacking of data frames across multiple levels—from transport and network protocols, through image and line layers, down to individual pixels—and added telemetry metadata to the resulting files. The Level 0 processor is the first and essential stage in a chain of processors that ultimately produces usable satellite images. 
-              </p>
-
-              <ul class="work__list">
-                <li>Python</li>
-                <li>Automated testing</li>
-                <li>Binary-frame decoding</li>
-                <li>Data-pipeline design</li>
-              </ul>
-            </div>
-
-            <div class="work__image-box">
-              <img src="./images/projects/sabiamar-logo.png"
-                   class="work__image"
-                   alt="SABIAMar L0 Processor — decoding pipeline overview" />
-            </div>
-          </div>
-
-          <!-- Satellite Crop Detector -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Satellite Crop Detector</h3>
-              <span class="work-project-badge">Work Project</span>
-              <p>
-                Python platform that classifies crop types from time-series of multi-spectral satellite imagery: per-pixel reflectance series are processed with classical computer-vision techniques, engineered into features, and fed to a Random&nbsp;Forest model—reaching a 93&nbsp;% F1 score.
-              </p>
-
-              <div class="sublists">
-                <ul class="work__list">
-                  <li>Python</li>
-                  <li>Classical computer vision
-                    <ul class="work__list work__list--nested">
-                      <li>Morphological operations</li>
-                      <li>Median filtering</li>
-                      <li>Upscaling / downscaling</li>
-                      <li>Binary masking</li>
-                    </ul>
-                  </li>
-                  <li>Geospatial imagery &amp; GIS</li>
-                  <li>Machine learning
-                    <ul class="work__list work__list--nested">
-                      <li>Time-series feature engineering</li>
-                      <li>Supervised classification</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="work__image-box">
-              <img src="./images/projects/satellite-crop-detector.png"
-                   class="work__image"
-                   alt="Satellite Crop Detector — classification workflow demo" />
-            </div>
-           
-          </div>
-
-          <!-- Poultry Environment Regulator -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Poultry Environment Regulator</h3>
-              <p>
-                Automated control system for chick brooders, using a microcontroller to manage heating, ventilation, and lighting schedules. The system is based on an Arduino UNO with DHT11 sensing, RTC time-keeping, and relay-controlled loads. Settings are adjusted via an LCD-encoder menu, with safe defaults restored after power loss.
-              </p>
-
-              <div class="sublists">
-                <ul class="work__list">
-                  <li>Circuit design &amp; implementation</li>
-                  <li>Arduino programming</li>
-                  <li>Electronic components
-                    <ul class="work__list work__list--nested">
-                      <li>Arduino</li>
-                      <li>DHT11 temperature-humidity sensor</li>
-                      <li>Real-time clock (RTC)</li>
-                      <li>Relay modules</li>
-                      <li>LCD display</li>
-                      <li>Rotary encoder + push-button</li>
-                      <li>Status LEDs</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-
-            <div class="work__image-box">
-              <div class="carousel" data-interval="3000">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-1.png" class="work__image" alt="Poultry Environment Regulator 1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-2.jpg" class="work__image" alt="Poultry Environment Regulator 2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-3.jpg" class="work__image" alt="Poultry Environment Regulator 3">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-4.jpg" class="work__image" alt="Poultry Environment Regulator 4">
                   </div>
                 </div>
-                <button class="carousel-control prev" aria-label="Previous image">❮</button>
-                <button class="carousel-control next" aria-label="Next image">❯</button>
+
+                <div class="work__image-box">
+                  <video class="work__image"
+                         data-project-media
+                         preload="metadata"
+                         poster="./images/projects/oee-analytics-poster.webp"
+                         muted
+                         playsinline
+                         controls
+                         controlsList="nodownload"
+                         aria-label="OEE Analytics — edge vision pipeline demo">
+                    <source src="./images/projects/oee-analytics.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+
+              <!-- SABIAMar L0 Processor Enhancements (Work Project) -->
+              <div class="work__box">
+                <div class="work__text">
+                  <h3>SABIAMar L0 Processor</h3>
+                  <span class="work-project-badge">Work Project</span>
+                  <p>
+                    Upgraded the Level-0 processor—the software responsible for decoding the raw binary image data transmitted by the SABIAMar Earth-observation satellite. Specifically, I implemented the unpacking of data frames across multiple levels—from transport and network protocols, through image and line layers, down to individual pixels—and added telemetry metadata to the resulting files. The Level 0 processor is the first and essential stage in a chain of processors that ultimately produces usable satellite images. 
+                  </p>
+
+                  <ul class="work__list">
+                    <li>Python</li>
+                    <li>Automated testing</li>
+                    <li>Binary-frame decoding</li>
+                    <li>Data-pipeline design</li>
+                  </ul>
+                </div>
+
+                <div class="work__image-box">
+                  <img src="./images/projects/sabiamar-logo.png"
+                       class="work__image"
+                       alt="SABIAMar L0 Processor — decoding pipeline overview" />
+                </div>
+              </div>
+
+              <!-- Satellite Crop Detector -->
+              <div class="work__box">
+                <div class="work__text">
+                  <h3>Satellite Crop Detector</h3>
+                  <span class="work-project-badge">Work Project</span>
+                  <p>
+                    Python platform that classifies crop types from time-series of multi-spectral satellite imagery: per-pixel reflectance series are processed with classical computer-vision techniques, engineered into features, and fed to a Random&nbsp;Forest model—reaching a 93&nbsp;% F1 score.
+                  </p>
+
+                  <div class="sublists">
+                    <ul class="work__list">
+                      <li>Python</li>
+                      <li>Classical computer vision
+                        <ul class="work__list work__list--nested">
+                          <li>Morphological operations</li>
+                          <li>Median filtering</li>
+                          <li>Upscaling / downscaling</li>
+                          <li>Binary masking</li>
+                        </ul>
+                      </li>
+                      <li>Geospatial imagery &amp; GIS</li>
+                      <li>Machine learning
+                        <ul class="work__list work__list--nested">
+                          <li>Time-series feature engineering</li>
+                          <li>Supervised classification</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="work__image-box">
+                  <img src="./images/projects/satellite-crop-detector.png"
+                       class="work__image"
+                       alt="Satellite Crop Detector — classification workflow demo" />
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Tablet-Joystick Dock -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Tablet-Joystick Dock</h3>
-              <p>
-                Custom 3D-printed add-on that clamps a joystick to a tablet while rerouting power, audio and volume controls through internal USB / 3.5 mm extensions and a dual-button circuit—restoring full charging, headphone and volume functionality during gameplay.
-              </p>
+        <div class="work__accordion" data-collapsible>
+          <button type="button" class="work__accordion-toggle" aria-expanded="false" aria-controls="other-projects-panel" data-collapsible-toggle>
+            <span class="work__accordion-title">Other Projects</span>
+            <span class="work__accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="work__accordion-panel" id="other-projects-panel" data-collapsible-panel hidden>
+            <div class="work__boxes work__boxes--nested">
 
-              <ul class="work__list">
-                <li>3D design</li>
-                <li>3D printing</li>
-                <li>Electronics prototyping</li>
-              </ul>
-            </div>
+              <!-- Poultry Environment Regulator -->
+              <div class="work__box">
+                <div class="work__text">
+                  <h3>Poultry Environment Regulator</h3>
+                  <p>
+                    Automated control system for chick brooders, using a microcontroller to manage heating, ventilation, and lighting schedules. The system is based on an Arduino UNO with DHT11 sensing, RTC time-keeping, and relay-controlled loads. Settings are adjusted via an LCD-encoder menu, with safe defaults restored after power loss.
+                  </p>
 
-            <div class="work__image-box">
-              <div class="carousel" data-interval="3000">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-1.png" class="work__image" alt="Tablet-Joystick Dock 1">
+                  <div class="sublists">
+                    <ul class="work__list">
+                      <li>Circuit design &amp; implementation</li>
+                      <li>Arduino programming</li>
+                      <li>Electronic components
+                        <ul class="work__list work__list--nested">
+                          <li>Arduino</li>
+                          <li>DHT11 temperature-humidity sensor</li>
+                          <li>Real-time clock (RTC)</li>
+                          <li>Relay modules</li>
+                          <li>LCD display</li>
+                          <li>Rotary encoder + push-button</li>
+                          <li>Status LEDs</li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-2.jpg" class="work__image" alt="Tablet-Joystick Dock 2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-3.jpg" class="work__image" alt="Tablet-Joystick Dock 3">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-4.jpg" class="work__image" alt="Tablet-Joystick Dock 4">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-5.jpg" class="work__image" alt="Tablet-Joystick Dock 5">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-6.jpg" class="work__image" alt="Tablet-Joystick Dock 6">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-7.JPG" class="work__image" alt="Tablet-Joystick Dock 7">
+
+                </div>
+
+                <div class="work__image-box">
+                  <div class="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-1.png" class="work__image" alt="Poultry Environment Regulator 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-2.jpg" class="work__image" alt="Poultry Environment Regulator 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-3.jpg" class="work__image" alt="Poultry Environment Regulator 3">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/poultry-environment-regulator/poultry-environment-regulator-4.jpg" class="work__image" alt="Poultry Environment Regulator 4">
+                      </div>
+                    </div>
+                    <button class="carousel-control prev" aria-label="Previous image">❮</button>
+                    <button class="carousel-control next" aria-label="Next image">❯</button>
                   </div>
                 </div>
-                <button class="carousel-control prev" aria-label="Previous image">❮</button>
-                <button class="carousel-control next" aria-label="Next image">❯</button>
+              </div>
+
+              <!-- Tablet-Joystick Dock -->
+              <div class="work__box">
+                <div class="work__text">
+                  <h3>Tablet-Joystick Dock</h3>
+                  <p>
+                    Custom 3D-printed add-on that clamps a joystick to a tablet while rerouting power, audio and volume controls through internal USB / 3.5 mm extensions and a dual-button circuit—restoring full charging, headphone and volume functionality during gameplay.
+                  </p>
+
+                  <ul class="work__list">
+                    <li>3D design</li>
+                    <li>3D printing</li>
+                    <li>Electronics prototyping</li>
+                  </ul>
+                </div>
+
+                <div class="work__image-box">
+                  <div class="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-1.png" class="work__image" alt="Tablet-Joystick Dock 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-2.jpg" class="work__image" alt="Tablet-Joystick Dock 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-3.jpg" class="work__image" alt="Tablet-Joystick Dock 3">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-4.jpg" class="work__image" alt="Tablet-Joystick Dock 4">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-5.jpg" class="work__image" alt="Tablet-Joystick Dock 5">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-6.jpg" class="work__image" alt="Tablet-Joystick Dock 6">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/projects/tablet-joystick-dock/tablet-joystick-dock-7.JPG" class="work__image" alt="Tablet-Joystick Dock 7">
+                      </div>
+                    </div>
+                    <button class="carousel-control prev" aria-label="Previous image">❮</button>
+                    <button class="carousel-control next" aria-label="Next image">❯</button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>          
+          </div>
+        </div>
+
 
 
     <!-- ***** Open Source Contributions ***** -->

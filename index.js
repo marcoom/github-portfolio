@@ -156,3 +156,130 @@ if (projectMediaBoxes.length) {
 
   projectMediaBoxes.forEach((box) => observer.observe(box));
 }
+
+// Accessible collapsible sections for project groups
+const collapsibleGroups = Array.from(document.querySelectorAll('[data-collapsible]'));
+
+if (collapsibleGroups.length) {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const transitionDefinition = 'height 0.32s cubic-bezier(0.4, 0, 0.2, 1)';
+
+  collapsibleGroups.forEach((group, index) => {
+    const trigger = group.querySelector('[data-collapsible-toggle]');
+    const panel = group.querySelector('[data-collapsible-panel]');
+
+    if (!trigger || !panel) {
+      return;
+    }
+
+    let transitionEndHandler = null;
+
+    const stopAnimation = () => {
+      if (transitionEndHandler) {
+        panel.removeEventListener('transitionend', transitionEndHandler);
+        transitionEndHandler = null;
+      }
+
+      panel.style.transition = '';
+      panel.style.height = '';
+      panel.style.overflow = '';
+    };
+
+    const ensureAriaControls = () => {
+      if (trigger.hasAttribute('aria-controls')) {
+        return;
+      }
+
+      const fallbackId = panel.id || `work-collapsible-${index}`;
+
+      if (!panel.id) {
+        panel.id = fallbackId;
+      }
+
+      trigger.setAttribute('aria-controls', fallbackId);
+    };
+
+    ensureAriaControls();
+
+    const registerTransitionEnd = (shouldHideAfter) => {
+      const handler = (event) => {
+        if (event.target !== panel || event.propertyName !== 'height') {
+          return;
+        }
+
+        stopAnimation();
+
+        if (shouldHideAfter) {
+          panel.hidden = true;
+        }
+      };
+
+      transitionEndHandler = handler;
+      panel.addEventListener('transitionend', handler);
+    };
+
+    const expandPanel = () => {
+      stopAnimation();
+      group.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+      panel.hidden = false;
+
+      if (prefersReducedMotion.matches) {
+        return;
+      }
+
+      const targetHeight = panel.scrollHeight;
+
+      panel.style.height = '0px';
+      panel.style.overflow = 'hidden';
+      panel.style.transition = transitionDefinition;
+
+      requestAnimationFrame(() => {
+        panel.style.height = `${targetHeight}px`;
+      });
+
+      registerTransitionEnd(false);
+    };
+
+    const collapsePanel = ({ skipAnimation = false } = {}) => {
+      stopAnimation();
+      group.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+
+      if (skipAnimation || prefersReducedMotion.matches) {
+        panel.hidden = true;
+        return;
+      }
+
+      const startHeight = panel.scrollHeight;
+
+      if (startHeight === 0) {
+        panel.hidden = true;
+        return;
+      }
+
+      panel.style.height = `${startHeight}px`;
+      panel.style.overflow = 'hidden';
+      panel.style.transition = transitionDefinition;
+
+      requestAnimationFrame(() => {
+        panel.style.height = '0px';
+      });
+
+      registerTransitionEnd(true);
+    };
+
+    trigger.addEventListener('click', () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      if (isExpanded) {
+        collapsePanel();
+        return;
+      }
+
+      expandPanel();
+    });
+
+    collapsePanel({ skipAnimation: true });
+  });
+}

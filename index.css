@@ -778,10 +778,6 @@ body:not(.user-is-tabbing) a:focus {
     opacity: 0.8;
   }
   
-  #certifications .row {
-    max-width: 960px;
-  }
-
   /* Work Project Badge */
   .work-project-badge {
     display: inline-block;

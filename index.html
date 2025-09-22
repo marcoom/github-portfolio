@@ -765,64 +765,70 @@
   <script src="./index.js"></script>
   <script>
     // Simple Carousel Implementation
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', () => {
       const carousels = document.querySelectorAll('.carousel');
-      
-      carousels.forEach(carousel => {
+
+      carousels.forEach((carousel) => {
         const items = carousel.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+        if (!totalItems) {
+          return;
+        }
+
         const prevBtn = carousel.querySelector('.prev');
         const nextBtn = carousel.querySelector('.next');
-        const interval = 5000; // 5 seconds
+        const interval = Number(carousel.dataset.interval) || 5000;
         let currentIndex = 0;
-        let slideInterval;
+        let slideInterval = null;
 
-        // Show initial slide
-        items[0].classList.add('active');
-        
-        // Function to show slide by index
-        function showSlide(index) {
-          // Remove active class from all items
-          items.forEach(item => item.classList.remove('active'));
-          
-          // Handle wrapping
-          currentIndex = (index + items.length) % items.length;
-          
-          // Show current slide
+        const setActiveSlide = (index) => {
+          items.forEach((item) => item.classList.remove('active'));
+          currentIndex = (index + totalItems) % totalItems;
           items[currentIndex].classList.add('active');
-        }
-        
-        // Next slide function
-        function nextSlide() {
-          showSlide(currentIndex + 1);
-        }
-        
-        // Previous slide function
-        function prevSlide() {
-          showSlide(currentIndex - 1);
-        }
-        
-        // Start auto-rotation
-        function startCarousel() {
-          stopCarousel();
-          slideInterval = setInterval(nextSlide, interval);
-        }
-        
-        // Stop auto-rotation
-        function stopCarousel() {
-          if (slideInterval) {
-            clearInterval(slideInterval);
+        };
+
+        const nextSlide = () => setActiveSlide(currentIndex + 1);
+        const prevSlide = () => setActiveSlide(currentIndex - 1);
+
+        const startCarousel = () => {
+          if (totalItems <= 1) {
+            return;
           }
+
+          stopCarousel();
+          slideInterval = window.setInterval(nextSlide, interval);
+        };
+
+        const stopCarousel = () => {
+          if (!slideInterval) {
+            return;
+          }
+
+          window.clearInterval(slideInterval);
+          slideInterval = null;
+        };
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            stopCarousel();
+            nextSlide();
+            startCarousel();
+          });
         }
-        
-        // Navigation buttons
-        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-        
-        // Pause on hover
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            stopCarousel();
+            prevSlide();
+            startCarousel();
+          });
+        }
+
         carousel.addEventListener('mouseenter', stopCarousel);
         carousel.addEventListener('mouseleave', startCarousel);
-        
-        // Start the carousel
+
+        setActiveSlide(0);
         startCarousel();
       });
     });

@@ -478,9 +478,9 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__image {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
@@ -567,8 +567,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: var(--gutter-normal);
-    height: 400px; /* Fixed height for the carousel container */
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -577,8 +580,14 @@ body:not(.user-is-tabbing) a:focus {
     .work__image-box {
         flex: 1;
         margin: 0 0 0 10rem;
-        height: 500px; /* Slightly taller on larger screens */
     }
+}
+
+.work__image-box > img,
+.work__image-box > video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
 @media(max-width: 900px) {

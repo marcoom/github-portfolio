@@ -405,14 +405,24 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+    background-image: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
         url('./images/header.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     font-size: var(--font-size-normal);
     scroll-snap-align: start;
+}
+
+@supports (background-image: image-set(url('./images/header.webp') type('image/webp'))) {
+    .header {
+        background-image: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
+            image-set(
+                url('./images/header.webp') type('image/webp'),
+                url('./images/header.jpg') type('image/jpeg')
+            );
+    }
 }
 
 .header__text {
@@ -695,11 +705,25 @@ body:not(.user-is-tabbing) a:focus {
     min-height: inherit;
 }
 
-.work__image-box > img,
+.work__image-box > picture,
 .work__image-box > video {
     width: 100%;
     height: auto;
     border-radius: 4px;
+}
+
+.work__image-box picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item picture {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 @media(max-width: 900px) {

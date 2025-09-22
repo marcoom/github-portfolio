@@ -51,8 +51,24 @@ if (projectMediaBoxes.length) {
 
   const getMedia = (box) => box.querySelector('[data-project-media]');
 
+  const ensureVideoSource = (video) => {
+    if (!video || video.dataset.videoLoaded === 'true') {
+      return;
+    }
+
+    const source = video.dataset.videoSrc;
+
+    if (!source) {
+      return;
+    }
+
+    video.src = source;
+    video.load();
+    video.dataset.videoLoaded = 'true';
+  };
+
   const seekToStart = (video) => {
-    if (!video) {
+    if (!video || video.dataset.videoLoaded !== 'true') {
       return;
     }
 
@@ -78,7 +94,7 @@ if (projectMediaBoxes.length) {
   };
 
   const resetVideo = (video) => {
-    if (!video) {
+    if (!video || video.dataset.videoLoaded !== 'true') {
       return;
     }
 
@@ -88,6 +104,12 @@ if (projectMediaBoxes.length) {
 
   const playVideo = (video) => {
     if (!video) {
+      return;
+    }
+
+    ensureVideoSource(video);
+
+    if (video.dataset.videoLoaded !== 'true') {
       return;
     }
 

@@ -134,6 +134,94 @@
               </video>
             </div>
           </div>
+          
+          <!-- AutoCBC -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>AutoCBC</h3>
+              <p>
+                Automated blood cell counting using AI—analyzes blood smear microscopy images to detect, count, and segment red blood cells, white blood cells, and platelets. Two-stage pipeline combining YOLO object detection with SAM2 segmentation delivers results in seconds with interactive visualization and comprehensive statistics.
+              </p>
+
+              <div class="sublists">
+                <ul class="work__list">
+                  <li>Computer Vision
+                    <ul class="work__list work__list--nested">
+                      <li>Object Detection</li>
+                      <li>Instance Segmentation</li>
+                    </ul>
+                  </li>
+                  <li>Streamlit UI</li>
+                  <li>Docker</li>
+                </ul>
+              </div>
+
+
+              <div class="work__links">
+                <a href="https://autocbc.streamlit.app/" target="_blank" class="link__text">
+                  Try online <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/marcoom/auto-cbc" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub - auto-cbc">
+                </a>
+              </div>
+            </div>
+
+            <div class="work__image-box">
+              <video class="work__image"
+                     data-project-media
+                     data-video-src="./images/projects/autocbc.mp4"
+                     preload="none"
+                     poster="./images/projects/autocbc-poster.webp"
+                     muted
+                     loop
+                     playsinline
+                     aria-label="AutoCBC — automated blood cell counting demo">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <!-- OpenGPT Chat -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>OpenGPT Chat</h3>
+              <p>
+                Local AI chat platform that lets you talk to your own large language model with access to tools and your private documents—fully offline and self-hosted. It integrates local LLMs, vector databases, workflow automation, and a conversational UI into a unified stack with RAG, agentic AI, and voice capabilities—all powered by open-source components via Docker Compose.
+              </p>
+
+              <ul class="work__list">
+                <li>Local LLM Inference (Ollama)</li>
+                <li>Retrieval-Augmented Generation (RAG)</li>
+                <li>Agentic AI</li>
+                <li>Vector Database (Qdrant)</li>
+                <li>Workflow Automation (n8n)</li>
+                <li>Conversational UI (Open WebUI)</li>
+                <li>PostgreSQL</li>
+                <li>Docker Compose</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/marcoom/opengpt-chat" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub - opengpt-chat">
+                </a>
+              </div>
+            </div>
+
+            <div class="work__image-box">
+              <video class="work__image"
+                     data-project-media
+                     data-video-src="./images/projects/open-gpt-chat.mp4"
+                     preload="none"
+                     poster="./images/projects/open-gpt-chat-poster.webp"
+                     muted
+                     loop
+                     playsinline
+                     aria-label="OpenGPT Chat — local AI chat platform demo">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
 
           <!-- Interactive Adventure Generator -->
           <div class="work__box">
@@ -223,8 +311,115 @@
                 Your browser does not support the video tag.
               </video>
             </div>
-          </div>          
+          </div> 
+          
+          <!-- Lunar Lander RL Controller -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Lunar Lander RL Controller</h3>
+              <p>
+                Interactive application combining deep reinforcement learning with human control in Gymnasium's LunarLander-v3 environment. Features a pre-trained Deep Q-Network agent that learned optimal landing strategies through 1M training timesteps, alongside manual control mode with seamless AI-human switching via terminal interface.
+              </p>
 
+              <ul class="work__list">
+                <li>Reinforcement Learning (DQN)</li>
+                <li>Gymnasium</li>
+                <li>Stable-Baselines3</li>
+                <li>Terminal UI</li>
+                <li>Docker</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/marcoom/lunar-lander-rl-controller" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub - lunar-lander-rl-controller">
+                </a>
+              </div>
+            </div>
+
+            <div class="work__image-box">
+              <video class="work__image"
+                     data-project-media
+                     data-video-src="./images/projects/lunar-lander-rl-controller.mp4"
+                     preload="none"
+                     poster="./images/projects/lunar-lander-rl-controller-poster.webp"
+                     muted
+                     loop
+                     playsinline
+                     aria-label="Lunar Lander RL Controller — reinforcement learning demo">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <!-- Whisper Studio -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Whisper Studio</h3>
+              <p>
+                Graphical interface for OpenAI's Whisper speech-to-text engine. Transcribe and translate audio/video files locally with support for 99 languages, 6 model sizes, microphone recording, and multiple output formats (txt, srt, vtt, json)—all processing happens on-device with no external APIs.
+              </p>
+
+              <ul class="work__list">
+                <li>NLP: Speech-to-Text (Whisper)</li>
+                <li>Streamlit UI</li>
+                <li>Docker</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/marcoom/whisper-studio" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub - whisper-studio">
+                </a>
+              </div>
+            </div>
+
+            <div class="work__image-box">
+              <picture>
+                <source srcset="./images/projects/whisper-studio.webp" type="image/webp">
+                <img src="./images/projects/whisper-studio.png"
+                     class="work__image"
+                     alt="Whisper Studio — speech-to-text interface"
+                     loading="lazy"
+                     decoding="async"
+                     fetchpriority="low" />
+              </picture>
+            </div>
+          </div>         
+
+          <!-- WeatherFlow -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>WeatherFlow</h3>
+              <p>
+                Docker-based Apache Airflow pipeline that orchestrates real-time weather data collection and processing. Implements a complete ETL workflow with API monitoring sensors, data extraction from OpenWeatherMap, transformation into normalized database structures, and bulk loading into PostgreSQL—running automatically every 10 minutes with failure handling and duplicate prevention.
+              </p>
+
+              <ul class="work__list">
+                <li>Apache Airflow</li>
+                <li>ETL &amp; Data Engineering</li>
+                <li>Docker &amp; Docker Compose</li>
+                <li>SQL</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/marcoom/weatherflow" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub - weatherflow">
+                </a>
+              </div>
+            </div>
+
+            <div class="work__image-box">
+              <picture>
+                <source srcset="./images/projects/weatherflow.webp" type="image/webp">
+                <img src="./images/projects/weatherflow.png"
+                     class="work__image"
+                     alt="WeatherFlow — Airflow ETL pipeline"
+                     loading="lazy"
+                     decoding="async"
+                     fetchpriority="low" />
+              </picture>
+            </div>
+          </div>
+          
           <!-- CNN Digits Detector -->
           <div class="work__box">
             <div class="work__text">
@@ -266,41 +461,6 @@
                      aria-label="CNN Digits Detector — real-time MNIST demo">
                 Your browser does not support the video tag.
               </video>
-            </div>
-          </div>
-
-          <!-- WeatherFlow -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>WeatherFlow</h3>
-              <p>
-                Docker-based Apache Airflow pipeline that orchestrates real-time weather data collection and processing. Implements a complete ETL workflow with API monitoring sensors, data extraction from OpenWeatherMap, transformation into normalized database structures, and bulk loading into PostgreSQL—running automatically every 10 minutes with failure handling and duplicate prevention.
-              </p>
-
-              <ul class="work__list">
-                <li>Apache Airflow</li>
-                <li>ETL &amp; Data Engineering</li>
-                <li>Docker &amp; Docker Compose</li>
-                <li>SQL</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/marcoom/weatherflow" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub - weatherflow">
-                </a>
-              </div>
-            </div>
-
-            <div class="work__image-box">
-              <picture>
-                <source srcset="./images/projects/weatherflow.webp" type="image/webp">
-                <img src="./images/projects/weatherflow.png"
-                     class="work__image"
-                     alt="WeatherFlow — Airflow ETL pipeline"
-                     loading="lazy"
-                     decoding="async"
-                     fetchpriority="low" />
-              </picture>
             </div>
           </div>
 
@@ -386,47 +546,6 @@
             </div>
           </div>
 
-          <!-- Blood Cells Count Aid -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Blood Cells Count Aid</h3>
-              <p>
-                Automated microscopy assistant that detects and counts red blood cells, white blood cells, and platelets in stained blood-smear images, overlaying colour-coded markers in a PyQt5 desktop UI—achieving ≈ 98 % overall counting accuracy versus expert annotations on selected test images.
-              </p>
-
-              <div class="sublists">
-                <ul class="work__list">
-                  <li>Classical Computer Vision
-                    <ul class="work__list work__list--nested">
-                      <li>Colour-plane decomposition</li>
-                      <li>Histogram equalisation</li>
-                      <li>Edge detection (Canny)</li>
-                      <li>Morphological operations</li>
-                      <li>Adaptive thresholding</li>
-                      <li>Distance-transform segmentation</li>
-                    </ul>
-                  </li>
-                  <li>PyQt5 UI</li>
-                </ul>
-              </div>
-
-            </div>
-
-            <div class="work__image-box">
-              <video class="work__image"
-                     data-project-media
-                     data-video-src="./images/projects/blood-cells-count-aid.mp4"
-                     preload="none"
-                     poster="./images/projects/blood-cells-count-aid-poster.webp"
-                     muted
-                     loop
-                     playsinline
-                     aria-label="Blood Cells Count Aid — automated cell counting demo">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
           <!-- Market-Sentiment Predictor -->
           <div class="work__box">
             <div class="work__text">
@@ -471,6 +590,47 @@
                      decoding="async"
                      fetchpriority="low" />
               </picture>
+            </div>
+          </div>
+
+          <!-- Blood Cells Count Aid -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Blood Cells Count Aid</h3>
+              <p>
+                Automated microscopy assistant that detects and counts red blood cells, white blood cells, and platelets in stained blood-smear images, overlaying colour-coded markers in a PyQt5 desktop UI—achieving ≈ 98 % overall counting accuracy versus expert annotations on selected test images.
+              </p>
+
+              <div class="sublists">
+                <ul class="work__list">
+                  <li>Classical Computer Vision
+                    <ul class="work__list work__list--nested">
+                      <li>Colour-plane decomposition</li>
+                      <li>Histogram equalisation</li>
+                      <li>Edge detection (Canny)</li>
+                      <li>Morphological operations</li>
+                      <li>Adaptive thresholding</li>
+                      <li>Distance-transform segmentation</li>
+                    </ul>
+                  </li>
+                  <li>PyQt5 UI</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="work__image-box">
+              <video class="work__image"
+                     data-project-media
+                     data-video-src="./images/projects/blood-cells-count-aid.mp4"
+                     preload="none"
+                     poster="./images/projects/blood-cells-count-aid-poster.webp"
+                     muted
+                     loop
+                     playsinline
+                     aria-label="Blood Cells Count Aid — automated cell counting demo">
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 

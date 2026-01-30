@@ -40,7 +40,19 @@ window.addEventListener("scroll", () => {
     isBackToTopRendered = false;
     alterStyles(isBackToTopRendered);
   }
+  updateScrollIndicator();
 });
+
+const scrollIndicator = document.getElementById("scrollIndicator");
+
+function updateScrollIndicator() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  if (scrollIndicator) {
+    scrollIndicator.style.width = scrolled + "%";
+  }
+}
 
 // Synchronize project media playback with viewport visibility
 const projectMediaBoxes = Array.from(document.querySelectorAll('.work__box')).filter((box) => box.querySelector('[data-project-media]'));
@@ -238,6 +250,8 @@ if (collapsibleGroups.length) {
 
       transitionEndHandler = handler;
       panel.addEventListener('transitionend', handler);
+      // Also update progress bar when transition ends to account for height changes
+      panel.addEventListener('transitionend', updateScrollIndicator);
     };
 
     const expandPanel = () => {

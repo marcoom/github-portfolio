@@ -104,9 +104,8 @@
                     <ul class="work__list">
                       <li>Object Detection (YOLO)
                         <ul class="work__list work__list--nested">
-                          <li>Image labeling and augmentation</li>
-                          <li>Model training on custom dataset</li>
-                          <li>Edge processing (NCNN export)</li>
+                          <li>Labeling & Augmentation (custom dataset)</li>
+                          <li>Edge Processing (NCNN)</li>
                         </ul>
                       </li>
                       <li>Tracking (Deep SORT)</li>
@@ -157,10 +156,12 @@
                 <div class="work__text">
                   <h3>AutoCBC</h3>
                   <p>
-                    Automated blood cell counting using AI-analyzes blood smear microscopy images to detect, count, and
-                    segment red blood cells, white blood cells, and platelets. Two-stage pipeline combining YOLO object
-                    detection with SAM2 segmentation delivers results in seconds with interactive visualization and
-                    comprehensive statistics.
+                    Automated blood cell counting system built with state-of-the-art
+                    computer vision. Combines YOLO object detection and SAM2 instance
+                    segmentation to accurately detect, classify, and segment RBCs,
+                    WBCs, and platelets from microscopy images. Provides real-time
+                    interactive overlays and comprehensive quantitative analysis via a
+                    Streamlit web interface.
                   </p>
 
                   <div class="sublists">
@@ -251,11 +252,11 @@
                 <div class="work__text">
                   <h3>CNN Digits Detector</h3>
                   <p>
-                    Interactive handwritten digit recognition system featuring a carefully regularized Convolutional
-                    Neural
-                    Network trained on the MNIST dataset with image augmentations. Provides real-time inference through
-                    an
-                    intuitive Gradio sketchpad interface-achieving 99.49% accuracy on test data.
+                    Interactive handwritten digit recognition system featuring
+                    a Convolutional Neural Network trained on the MNIST
+                    dataset with image augmentations. Provides real-time
+                    inference through an interactive sketchpad interface -
+                    achieving 99.49% accuracy on test data.
                   </p>
 
                   <div class="sublists">
@@ -313,23 +314,21 @@
                 <div class="work__text">
                   <h3>OpenGPT Chat</h3>
                   <p>
-                    Local AI chat platform that lets you talk to your own large language model with access to tools and
-                    your
-                    private documents-fully offline and self-hosted. It integrates local LLMs, vector databases,
-                    workflow
-                    automation, and a conversational UI into a unified stack with RAG, agentic AI, and voice
-                    capabilities-all powered by open-source components via Docker Compose.
+                    Self-hosted, fully offline AI chat platform that lets you
+                    interact with local LLMs, tools, and private documents.
+                    Combines RAG, agent workflows, voice input, and a
+                    conversational UI into a single Docker-based open-source
+                    stack with full data privacy.
                   </p>
 
                   <ul class="work__list">
                     <li>Local LLM Inference (Ollama)</li>
                     <li>Retrieval-Augmented Generation (RAG)</li>
-                    <li>Agentic AI</li>
+                    <li>Agentic AI Workflow (n8n)</li>
                     <li>Vector Database (Qdrant)</li>
-                    <li>Workflow Automation (n8n)</li>
-                    <li>Conversational UI (Open WebUI)</li>
                     <li>PostgreSQL</li>
                     <li>Docker Compose</li>
+                    <li>Conversational UI (Open WebUI)</li>
                   </ul>
 
                   <div class="work__links">
@@ -459,7 +458,7 @@
                   </p>
 
                   <ul class="work__list">
-                    <li>NLP: Speech-to-Text (Whisper)</li>
+                    <li>Speech-to-Text (Whisper)</li>
                     <li>Streamlit UI</li>
                     <li>Docker</li>
                   </ul>
@@ -499,10 +498,12 @@
                 <div class="work__text">
                   <h3>Health Anomaly Detector</h3>
                   <p>
-                    A wearable-style monitoring system that generates synthetic vitals, applies unsupervised anomaly
-                    detection tailored to each user, and streams results into Grafana dashboards-built with a
-                    production-ready architecture using a metrics collection agent and a time-series database for
-                    persistence.
+                    End-to-end wearable-style monitoring stack that simulates
+                    vital signs, detects user-specific anomalies with
+                    unsupervised learning, and streams metrics and alarms into
+                    Grafana dashboards via Telegraf + InfluxDB. Includes a
+                    FastAPI service, Streamlit controls, Docker Compose, and
+                    AWS deployment.
                   </p>
 
                   <div class="sublists">
@@ -513,7 +514,7 @@
                       <li>TIG stack (Telegraf, InfluxDB, Grafana)</li>
                       <li>Docker Compose</li>
                       <li>AWS Deployment</li>
-                      <li>Project management (GitHub Projects)</li>
+                      <!-- <li>Project management (GitHub Projects)</li> -->
                     </ul>
                   </div>
 
@@ -601,11 +602,11 @@
                 <div class="work__text">
                   <h3>Survival Probability Simulator</h3>
                   <p>
-                    Interactive machine-learning application that predicts survival probability based on an individual’s
-                    demographic and socioeconomic factors. Features a trained Random Forest classifier with real-time
-                    predictions in a Streamlit UI, comprehensive exploratory data analysis with interactive
-                    visualizations,
-                    and a production-ready data pipeline-complete with Docker deployment for seamless containerization.
+                    Interactive ML app that predicts survival probability
+                    from demographic and socioeconomic features using a
+                    Random Forest model, with real-time Streamlit predictions,
+                    comprehensive EDA with interactive visualizations, and a
+                    Dockerized data pipeline.
                   </p>
 
                   <ul class="work__list">
@@ -646,19 +647,17 @@
                 <div class="work__text">
                   <h3>Household Energy Forecasting</h3>
                   <p>
-                    Forecasts household electricity consumption using a complete data‑science pipeline-from exploration
-                    and
-                    preprocessing to model training, comparison, and rigorous evaluation-aimed at improving planning and
-                    operational efficiency.
-                  </p>
-                  <p>
-                    A report in scientific format and presentation are available (Spanish).
+                    End-to-end data-science project forecasting household
+                    electricity consumption, covering EDA, preprocessing,
+                    feature engineering, time-series modeling, comparison, and
+                    evaluation, with results documented in a scientific report
+                    and presentation (Spanish).
                   </p>
 
                   <ul class="work__list">
                     <li>EDA & ETL</li>
                     <li>Feature engineering</li>
-                    <li>Time‑series models: FFNN, Prophet, RF</li>
+                    <li>Time-series models: FFNN, Prophet, RF</li>
                     <li>Fourier seasonality</li>
                     <li>Gradio notebooks</li>
                     <li>LaTeX reporting</li>
@@ -676,7 +675,7 @@
                 <div class="work__image-box">
                   <picture>
                     <source srcset="./images/projects/household-energy-forecasting.webp" type="image/webp">
-                    <img src="./images/projects/household-energy-forecasting.png" class="work__image"
+                    <img src="./images/projects/household-energy-forecasting.png" class="work__image--small"
                       alt="Household Energy Forecasting - time‑series models and results" loading="lazy"
                       decoding="async" fetchpriority="low" />
                   </picture>
@@ -688,10 +687,11 @@
                 <div class="work__text">
                   <h3>Market-Sentiment Predictor</h3>
                   <p>
-                    Pipeline that scrapes finance-related tweets, extracts daily keyword sentiment with RoBERTa (≈ 90 %
-                    accuracy), fuses it with index prices to build time-series features, and trains
-                    classification/regression models for next-day moves-revealing only 50 % up-vs-down accuracy and
-                    underscoring the random-walk nature of the target.
+                    End-to-end NLP and time-series pipeline that scrapes
+                    finance tweets, extracts daily sentiment (BERT-based),
+                    fuses it with market prices, and trains classification
+                    and regression models for next-day moves - revealing
+                    near-random predictive power.
                   </p>
 
                   <div class="sublists">
@@ -704,10 +704,10 @@
                         </ul>
                       </li>
                       <li>Time-Series Feature Engineering
-                        <ul class="work__list work__list--nested">
+                        <!-- <ul class="work__list work__list--nested">
                           <li>Daily aggregation</li>
                           <li>Log-return targets</li>
-                        </ul>
+                        </ul> -->
                       </li>
                       <li>Supervised Learning
                         <ul class="work__list work__list--nested">
@@ -723,7 +723,7 @@
                 <div class="work__image-box">
                   <picture>
                     <source srcset="./images/projects/market-sentiment-predictor.webp" type="image/webp">
-                    <img src="./images/projects/market-sentiment-predictor.png" class="work__image"
+                    <img src="./images/projects/market-sentiment-predictor.png" class="work__image--small"
                       alt="Market-Sentiment Predictor - sentiment fusion and modelling demo" loading="lazy"
                       decoding="async" fetchpriority="low" />
                   </picture>
@@ -797,37 +797,21 @@
                   <h3>OEE Analytics</h3>
                   <span class="work-project-badge">Work Project</span>
                   <p>
-                    End-to-end vision solution for a commercial bakery: smart cameras with object detection algorithms
-                    and DeepSORT tracking on Raspberry Pi 5 + Hailo edge HW stream MQTT counts to a Grafana OEE
-                    dashboard-boosting data-driven productivity across the line.
+                    Industrial edge-AI system for scalable production-line
+                    monitoring, using multiple cameras positioned along a
+                    conveyor to detect, track, and count items in real time on
+                    embedded hardware. Vision-derived counts are combined with
+                    additional operational inputs to compute real-time and
+                    historical OEE metrics, enabling continuous monitoring of
+                    throughput, availability, and performance across the line.
                   </p>
 
                   <div class="sublists">
                     <ul class="work__list">
-                      <li>Computer vision
-                        <ul class="work__list work__list--nested">
-                          <li>Object detection</li>
-                          <li>Multi-object tracking&nbsp;(DeepSORT)</li>
-                          <li>Custom dataset collection&nbsp;&amp;&nbsp;labeling</li>
-                        </ul>
-                      </li>
-                      <li>Edge&nbsp;AI hardware
-                        <ul class="work__list work__list--nested">
-                          <li>Raspberry&nbsp;Pi&nbsp;5</li>
-                          <li>Hailo acceleration</li>
-                        </ul>
-                      </li>
-                      <li>MQTT messaging</li>
-                      <li>Grafana dashboards</li>
-                      <li>3D printing</li>
-                      <li>Systems engineering&nbsp;&amp; leadership
-                        <ul class="work__list work__list--nested">
-                          <li>Requirements engineering</li>
-                          <li>Architecture design</li>
-                          <li>Team mentoring &amp; project ownership</li>
-                          <li>Client installation &amp; training</li>
-                        </ul>
-                      </li>
+                      <li>Computer Vision (Detection &amp; Tracking)</li>
+                      <li>Edge AI on embedded systems</li>
+                      <li>Metrics collection, data persistence, and visualization</li>
+                      <li>Systems engineering&nbsp;&amp; team leadership</li>
                     </ul>
                   </div>
                 </div>
@@ -881,29 +865,19 @@
                   <h3>Satellite Crop Detector</h3>
                   <span class="work-project-badge">Work Project</span>
                   <p>
-                    Python platform that classifies crop types from time-series of multi-spectral satellite imagery:
-                    per-pixel reflectance series are processed with classical computer-vision techniques, engineered
-                    into features, and fed to a Random&nbsp;Forest model-reaching a 93&nbsp;% F1 score.
+                    Python-based system for crop-type classification from
+                    multi-spectral satellite time series, using classical
+                    computer-vision preprocessing and engineered temporal
+                    features with a Random Forest model, achieving a 93% F1
+                    score.
                   </p>
 
                   <div class="sublists">
                     <ul class="work__list">
                       <li>Python</li>
-                      <li>Classical computer vision
-                        <ul class="work__list work__list--nested">
-                          <li>Morphological operations</li>
-                          <li>Median filtering</li>
-                          <li>Upscaling / downscaling</li>
-                          <li>Binary masking</li>
-                        </ul>
-                      </li>
+                      <li>Classical Computer Vision (morphology, filtering, resampling, masking)</li>
                       <li>Geospatial imagery &amp; GIS</li>
-                      <li>Machine learning
-                        <ul class="work__list work__list--nested">
-                          <li>Time-series feature engineering</li>
-                          <li>Supervised classification</li>
-                        </ul>
-                      </li>
+                      <li>Machine learning (time-series features, supervised classification)</li>
                     </ul>
                   </div>
                 </div>
@@ -936,7 +910,7 @@
                   <h3>Poultry Environment Regulator</h3>
                   <p>
                     Automated control system for chick brooders, using a microcontroller to manage heating, ventilation,
-                    and lighting schedules. The system is based on an Arduino UNO with DHT11 sensing, RTC time-keeping,
+                    and lighting schedules. Based on Arduino UNO with DHT11 sensing, RTC time-keeping,
                     and relay-controlled loads. Settings are adjusted via an LCD-encoder menu, with safe defaults
                     restored after power loss.
                   </p>
@@ -945,17 +919,8 @@
                     <ul class="work__list">
                       <li>Circuit design &amp; implementation</li>
                       <li>Arduino programming</li>
-                      <li>Electronic components
-                        <ul class="work__list work__list--nested">
-                          <li>Arduino</li>
-                          <li>DHT11 temperature-humidity sensor</li>
-                          <li>Real-time clock (RTC)</li>
-                          <li>Relay modules</li>
-                          <li>LCD display</li>
-                          <li>Rotary encoder + push-button</li>
-                          <li>Status LEDs</li>
-                        </ul>
-                      </li>
+                      <li>Electronic components (Arduino, DHT11, RTC, relay modules, LCD Display, Rotary encoder,
+                        push-button, status LEDs)</li>
                     </ul>
                   </div>
 
@@ -1145,14 +1110,24 @@
                 </div>
               </li>
 
+              <!-- EF SET English -->
+              <li class="cert">
+                <img src="./images/certifications/efset.svg" alt="Education First (EF)" class="cert__logo" />
+                <div class="cert__body">
+                  <h3>EF Standard English Test (EF SET)</h3>
+                  <p>Education First (EF) - 2025</p>
+                  <p class="cert__detail">Proficiency Level: <strong>C2</strong>.
+                  </p>
+                </div>
+              </li>
+
               <!-- Cambridge English -->
               <li class="cert">
                 <img src="./images/certifications/cambridge.svg" alt="University of Cambridge" class="cert__logo" />
                 <div class="cert__body">
-                  <h3>First Certificate in English (FCE)</h3>
+                  <h3>B2 First (FCE)</h3>
                   <p>University of Cambridge - 2017</p>
-                  <p class="cert__detail">Official level: <strong>B2</strong> &nbsp;•&nbsp; Current proficiency:
-                    <strong>C1</strong>.
+                  <p class="cert__detail">Grade A - <strong>C1</strong> level performance.
                   </p>
                 </div>
               </li>
@@ -1182,9 +1157,9 @@
               <div class="about__text">
                 <!-- Replace the below paragraph with info about yourself -->
                 <p>
-                  I apply Python, Computer Vision, and Machine Learning to solve real‑world problems and deliver
+                  I apply Python, Computer Vision, and Machine Learning to solve real-world problems and deliver
                   reliable AI systems.
-                  My work ranges from extracting actionable insights from satellite imagery to deploying edge based
+                  My work ranges from extracting actionable insights from satellite imagery to deploying edge-based
                   computer vision systems in manufacturing.
                   Continuous learning is central to how I work, and I share my projects openly so others can build
                   faster.
@@ -1197,7 +1172,7 @@
                 <!-- Add a nice photo of yourself -->
                 <picture>
                   <source srcset="./images/profile-picture-circle.webp" type="image/webp">
-                  <img class="about__photo" src="./images/profile-picture-circle.png" alt="" width="500" height="500"
+                  <img class="about__photo" src="./images/profile-picture-circle.png" alt="" width="300" height="300"
                     loading="lazy" decoding="async" fetchpriority="low" />
                 </picture>
               </div>

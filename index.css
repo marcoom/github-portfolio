@@ -708,6 +708,49 @@ body:not(.user-is-tabbing) a:focus {
     min-height: clamp(calc(var(--gutter-medium) * 5), 55vh, calc(var(--gutter-huge) * 5));
 }
 
+/* Play Overlay for Videos */
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.play-overlay:hover {
+    background: rgba(0, 0, 0, 0.6);
+    transform: translate(-50%, -50%) scale(1.1);
+    border-color: var(--pink);
+}
+
+.play-overlay svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: white;
+    transition: fill 0.3s ease;
+}
+
+.play-overlay:hover svg {
+    fill: var(--pink);
+}
+
+.play-overlay.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 @media(min-width: 901px) {
     .work__image-box {
         flex: 1;

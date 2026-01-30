@@ -111,7 +111,14 @@ if (projectMediaBoxes.length) {
     }
 
     video.pause();
-    seekToStart(video);
+    video.controls = false;
+    video.load(); // Reset state and show poster
+
+    const box = video.closest('.work__box');
+    const playButton = box ? box.querySelector('[data-play-button]') : null;
+    if (playButton) {
+      playButton.classList.remove('is-hidden');
+    }
   };
 
   const playVideo = (video) => {
@@ -133,6 +140,14 @@ if (projectMediaBoxes.length) {
         /* Autoplay may be blocked; user interaction will resume playback. */
       });
     }
+
+    // Hide play button and show controls when playing starts
+    const box = video.closest('.work__box');
+    const playButton = box ? box.querySelector('[data-play-button]') : null;
+    if (playButton) {
+      playButton.classList.add('is-hidden');
+      video.controls = true;
+    }
   };
 
   projectMediaBoxes.forEach((box) => {
@@ -143,6 +158,18 @@ if (projectMediaBoxes.length) {
     }
 
     visibilityByBox.set(box, 0);
+  });
+
+  // Handle manual play button clicks
+  document.addEventListener('click', (e) => {
+    const playButton = e.target.closest('[data-play-button]');
+    if (playButton) {
+      const box = playButton.closest('.work__box');
+      const media = getMedia(box);
+      if (media) {
+        playVideo(media);
+      }
+    }
   });
 
   const observer = new IntersectionObserver((entries) => {
@@ -173,7 +200,11 @@ if (projectMediaBoxes.length) {
           resetVideo(getMedia(activeBox));
         }
 
-        playVideo(getMedia(bestBox));
+        // Just ensure source starts loading in background when centered
+        const media = getMedia(bestBox);
+        if (media) {
+          ensureVideoSource(media);
+        }
         activeBox = bestBox;
       }
 

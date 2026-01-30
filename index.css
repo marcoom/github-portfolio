@@ -112,6 +112,11 @@ section {
     border-bottom: var(--border-light);
 }
 
+.work {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
 img {
     object-fit: contain;
     max-width: 100%;
@@ -145,6 +150,14 @@ h3 {
 h2 {
     font-size: var(--font-size-large);
     margin-bottom: var(--gutter-medium);
+}
+
+.work h2 {
+    margin-bottom: 0;
+}
+
+.work h2::after {
+    margin-bottom: 1.5rem;
 }
 
 h2::after {
@@ -452,22 +465,17 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Work ----- */
 /* --------------------------------------- */
 
-.work__group-heading {
-    font-size: var(--font-size-medium);
-    margin: 0 0 var(--gutter-normal);
-    text-transform: uppercase;
-}
 
 .work__accordion {
     border-top: var(--border-light);
-    padding: var(--gutter-normal) 0;
-    margin-top: var(--gutter-medium);
+    padding: 1.5rem 0;
+    margin-top: 0;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
 
-.work__accordion+.work__accordion {
-    margin-top: var(--gutter-normal);
+.work__accordion:last-of-type {
+    border-bottom: var(--border-light);
 }
 
 .work__accordion-toggle {
@@ -486,7 +494,14 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__accordion-title {
+    font-family: 'Jost', sans-serif;
     font-size: var(--font-size-medium);
+    line-height: 1.2;
+    transition: color 0.2s ease;
+}
+
+.work__accordion-toggle:hover .work__accordion-title {
+    color: var(--pink);
 }
 
 .work__accordion-icon {

@@ -40,7 +40,19 @@ window.addEventListener("scroll", () => {
     isBackToTopRendered = false;
     alterStyles(isBackToTopRendered);
   }
+  updateScrollIndicator();
 });
+
+const scrollIndicator = document.getElementById("scrollIndicator");
+
+function updateScrollIndicator() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  if (scrollIndicator) {
+    scrollIndicator.style.width = scrolled + "%";
+  }
+}
 
 // Synchronize project media playback with viewport visibility
 const projectMediaBoxes = Array.from(document.querySelectorAll('.work__box')).filter((box) => box.querySelector('[data-project-media]'));
@@ -99,7 +111,14 @@ if (projectMediaBoxes.length) {
     }
 
     video.pause();
-    seekToStart(video);
+    video.controls = false;
+    video.load(); // Reset state and show poster
+
+    const box = video.closest('.work__box');
+    const playButton = box ? box.querySelector('[data-play-button]') : null;
+    if (playButton) {
+      playButton.classList.remove('is-hidden');
+    }
   };
 
   const playVideo = (video) => {
@@ -121,6 +140,14 @@ if (projectMediaBoxes.length) {
         /* Autoplay may be blocked; user interaction will resume playback. */
       });
     }
+
+    // Hide play button and show controls when playing starts
+    const box = video.closest('.work__box');
+    const playButton = box ? box.querySelector('[data-play-button]') : null;
+    if (playButton) {
+      playButton.classList.add('is-hidden');
+      video.controls = true;
+    }
   };
 
   projectMediaBoxes.forEach((box) => {
@@ -131,6 +158,18 @@ if (projectMediaBoxes.length) {
     }
 
     visibilityByBox.set(box, 0);
+  });
+
+  // Handle manual play button clicks
+  document.addEventListener('click', (e) => {
+    const playButton = e.target.closest('[data-play-button]');
+    if (playButton) {
+      const box = playButton.closest('.work__box');
+      const media = getMedia(box);
+      if (media) {
+        playVideo(media);
+      }
+    }
   });
 
   const observer = new IntersectionObserver((entries) => {
@@ -161,7 +200,11 @@ if (projectMediaBoxes.length) {
           resetVideo(getMedia(activeBox));
         }
 
-        playVideo(getMedia(bestBox));
+        // Just ensure source starts loading in background when centered
+        const media = getMedia(bestBox);
+        if (media) {
+          ensureVideoSource(media);
+        }
         activeBox = bestBox;
       }
 
@@ -238,6 +281,8 @@ if (collapsibleGroups.length) {
 
       transitionEndHandler = handler;
       panel.addEventListener('transitionend', handler);
+      // Also update progress bar when transition ends to account for height changes
+      panel.addEventListener('transitionend', updateScrollIndicator);
     };
 
     const expandPanel = () => {
@@ -259,6 +304,15 @@ if (collapsibleGroups.length) {
       requestAnimationFrame(() => {
         panel.style.height = `${targetHeight}px`;
       });
+
+      // Auto-scroll to center the first project in the newly expanded category
+      const firstProject = panel.querySelector('.work__box');
+      if (firstProject) {
+        // Delay slightly to ensure height animation starts and doesn't conflict with scroll
+        setTimeout(() => {
+          firstProject.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 120);
+      }
 
       registerTransitionEnd(false);
     };

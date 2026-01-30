@@ -42,7 +42,7 @@
 
     --container-max-width: 1180px;
     --container-normal-width: 800px;
-    --container-medium-width: 700px; 
+    --container-medium-width: 700px;
     --container-small-width: 500px;
 
     --gutter-huge: 12rem;
@@ -55,7 +55,8 @@
 }
 
 html {
-    font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+    font-size: 62.5%;
+    /* (16/10)*100 = 62.5% => 1rem = 10px */
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -179,7 +180,7 @@ p {
 }
 
 @media(max-width: 900px) {
-    p { 
+    p {
         max-width: var(--container-small-width);
     }
 }
@@ -220,7 +221,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--pink);
+    border: 1px solid var(--pink);
     font-weight: 400;
 }
 
@@ -406,7 +407,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background-image: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)),
         url('./images/header.jpg');
     height: 100vh;
     background-size: cover;
@@ -418,11 +419,9 @@ body:not(.user-is-tabbing) a:focus {
 
 @supports (background-image: image-set(url('./images/header.webp') type('image/webp'))) {
     .header {
-        background-image: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
-            image-set(
-                url('./images/header.webp') type('image/webp'),
-                url('./images/header.jpg') type('image/jpeg')
-            );
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)),
+            image-set(url('./images/header.webp') type('image/webp'),
+                url('./images/header.jpg') type('image/jpeg'));
     }
 }
 
@@ -467,7 +466,7 @@ body:not(.user-is-tabbing) a:focus {
     scroll-snap-stop: always;
 }
 
-.work__accordion + .work__accordion {
+.work__accordion+.work__accordion {
     margin-top: var(--gutter-normal);
 }
 
@@ -593,6 +592,11 @@ body:not(.user-is-tabbing) a:focus {
     transition: all 0.3s ease;
 }
 
+.work__image--small {
+    max-width: 65%;
+    margin: 0 auto;
+}
+
 /* Carousel Styles */
 .carousel {
     position: relative;
@@ -600,8 +604,10 @@ body:not(.user-is-tabbing) a:focus {
     height: 100%;
     overflow: hidden;
     border-radius: 4px;
-    background-color: #000000; /* Fallback background */
-    min-height: 300px; /* Ensure minimum height */
+    background-color: #000000;
+    /* Fallback background */
+    min-height: 300px;
+    /* Ensure minimum height */
 }
 
 .carousel-inner {
@@ -700,14 +706,14 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-.work__image-box > .carousel {
+.work__image-box>.carousel {
     width: 100%;
     height: 100%;
     min-height: inherit;
 }
 
-.work__image-box > picture,
-.work__image-box > video {
+.work__image-box>picture,
+.work__image-box>video {
     width: 100%;
     height: auto;
     border-radius: 4px;
@@ -784,7 +790,7 @@ body:not(.user-is-tabbing) a:focus {
     .about__text {
         flex: 0 0 35%;
     }
-    
+
     .about__photo-container {
         flex: 1;
         margin: 0 var(--gutter-huge) 0 0;
@@ -838,7 +844,7 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .footer {
         padding: var(--gutter-medium) 0;
-    } 
+    }
 }
 
 /* === Sublists for projects descriptions === */
@@ -847,37 +853,37 @@ body:not(.user-is-tabbing) a:focus {
     padding-left: 1.25rem;
     margin: 0;
     font-size: 0.98em;
-  }
-  
-  .sublists .work__list li {
+}
+
+.sublists .work__list li {
     margin: 0.2rem 0;
-  }
-  
-  .sublists .work__list li::before {
+}
+
+.sublists .work__list li::before {
     content: none !important;
-  }
-  
-  .sublists .work__list li > ul.work__list--nested {
+}
+
+.sublists .work__list li>ul.work__list--nested {
     list-style: circle;
     padding-left: 1.25rem;
     margin: 0.15rem 0;
     font-size: 0.9em;
     line-height: 1.3;
     font-style: italic;
-  }
-  
-  .sublists .work__list--nested li {
+}
+
+.sublists .work__list--nested li {
     margin: 0.12rem 0;
-  }
-  
-  .sublists .work__list--nested li::marker {
+}
+
+.sublists .work__list--nested li::marker {
     font-size: 0.8em;
-  }
-  
-  .sublists .work__list--nested li:last-child {
+}
+
+.sublists .work__list--nested li:last-child {
     margin-bottom: 1rem;
-  }
-  
+}
+
 /* === Certifications: vertical stack & readable sizes === */
 
 .certs {
@@ -887,46 +893,46 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-  }
-  
-  .cert {
+}
+
+.cert {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     padding: 1.1rem 1.25rem;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
-  }
-  
-  .cert__logo {
+}
+
+.cert__logo {
     width: 56px;
     height: 56px;
     object-fit: contain;
     flex-shrink: 0;
 
-  }
-  
-  .cert__body h3 {
+}
+
+.cert__body h3 {
     margin: 0 0 0.4rem 0;
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 600;
-  }
-  
-  .cert__body p {
+}
+
+.cert__body p {
     margin: 0.15rem 0 0 0;
     font-size: 1.5rem;
     opacity: 0.9;
-  }
-  
-  .cert__detail {
+}
+
+.cert__detail {
     font-size: 0.98rem;
     opacity: 0.8;
-  }
-  
-  /* Work Project Badge */
-  .work-project-badge {
+}
+
+/* Work Project Badge */
+.work-project-badge {
     display: inline-block;
     background-color: white;
     color: black;
@@ -936,8 +942,8 @@ body:not(.user-is-tabbing) a:focus {
     font-weight: 500;
     margin-bottom: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-snap-type: none;

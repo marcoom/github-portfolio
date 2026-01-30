@@ -260,6 +260,15 @@ if (collapsibleGroups.length) {
         panel.style.height = `${targetHeight}px`;
       });
 
+      // Auto-scroll to center the first project in the newly expanded category
+      const firstProject = panel.querySelector('.work__box');
+      if (firstProject) {
+        // Delay slightly to ensure height animation starts and doesn't conflict with scroll
+        setTimeout(() => {
+          firstProject.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 120);
+      }
+
       registerTransitionEnd(false);
     };
 
